@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Docker run') {
+    stage('Build Container') {
       steps {
-        sh 'docker --version'
+        sh 'docker build -t calculator -f Dockerfile.production .'
       }
     }
   }
