@@ -1,15 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Install') {
+    stage('Docker run') {
       steps {
-        sh 'npm install'
-      }
-    }
-    stage('Test') {
-      steps {
-        sh '''npm --version
-node --version'''
+        sh 'docker --version'
       }
     }
   }
